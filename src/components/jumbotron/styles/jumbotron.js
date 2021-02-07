@@ -3,7 +3,7 @@ import styled from 'styled-components/macro';
 export const Item = styled.div`
   display: flex;
   border-bottom: 8px solid #222;
-  padding: 5rem 5%;
+  padding: 3rem 5%;
   color: #fff;
   overflow: hidden;
 `;
@@ -32,6 +32,7 @@ export const Pane = styled.div`
 export const Title = styled.h2`
   font-size: 5rem;
   line-height: 1.1;
+  font-weight: 600;
   margin-bottom: 0.8rem;
 
   @media (max-width: 600px) {
@@ -43,9 +44,11 @@ export const SubTitle = styled.h3`
   font-size: 2.6rem;
   font-weight: normal;
   line-height: normal;
+  width: 92%;
 
   @media (max-width: 600px) {
     font-size: 1.8rem;
+    width: 100%;
   }
 `;
 

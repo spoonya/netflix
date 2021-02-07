@@ -1,7 +1,9 @@
 import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyles = createGlobalStyle`
-  *, *::before, *::after {
+  *,
+  *::before,
+  *::after {
     box-sizing: border-box;
   }
 
@@ -25,6 +27,23 @@ const GlobalStyles = createGlobalStyle`
   img {
     max-width: 100%;
     height: auto;
+  }
+
+  a {
+    display: inline-block;
+    text-decoration: none;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-weight: 400;
+
+    margin: 0;
+    padding: 0;
   }
 
 `;
