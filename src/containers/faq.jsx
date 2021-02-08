@@ -1,17 +1,26 @@
 import React from 'react';
 import faqData from '../fixtures/faqs.json';
-import { Faq } from '../components';
+import { Accordion } from '../components';
+import OptForm from '../components/opt-form';
 
 export default function FaqContainer() {
   return (
-    <Faq>
-      <Faq.Title>Frequently Asked Questions</Faq.Title>
+    <Accordion>
+      <Accordion.Title>Frequently Asked Questions</Accordion.Title>
       {faqData.map((item) => (
-        <Faq.Item key={item.id}>
-          <Faq.Header>{item.header}</Faq.Header>
-          <Faq.Body>{item.body}</Faq.Body>
-        </Faq.Item>
+        <Accordion.Item key={item.id}>
+          <Accordion.Header>{item.header}</Accordion.Header>
+          <Accordion.Body>{item.body}</Accordion.Body>
+        </Accordion.Item>
       ))}
-    </Faq>
+
+      <OptForm>
+        <OptForm.Text>
+          Ready to watch? Enter your email to create or restart your membership.
+        </OptForm.Text>
+        <OptForm.Input placeholder="Email address" />
+        <OptForm.Button>Try 30 days free</OptForm.Button>
+      </OptForm>
+    </Accordion>
   );
 }

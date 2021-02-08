@@ -7,10 +7,19 @@ export const Container = styled.div`
 
 export const Inner = styled.div`
   display: flex;
-  padding: 7rem 4.5rem;
+  padding: 4rem 4.5rem;
   flex-direction: column;
   margin: auto;
   width: 67%;
+
+  @media (max-width: 1000px) {
+    width: 100%;
+  }
+
+  @media (max-width: 600px) {
+    width: 100%;
+    padding: 4rem 1.5rem;
+  }
 `;
 
 export const Title = styled.h2`

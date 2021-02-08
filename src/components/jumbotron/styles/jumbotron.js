@@ -24,7 +24,6 @@ export const Pane = styled.div`
 
   @media (max-width: 1000px) {
     width: 100%;
-    padding: 0 4.5rem;
     text-align: center;
   }
 `;
@@ -46,9 +45,12 @@ export const SubTitle = styled.h3`
   line-height: normal;
   width: 89%;
 
+  @media (max-width: 1000px) {
+    width: 100%;
+  }
+
   @media (max-width: 600px) {
     font-size: 1.8rem;
-    width: 100%;
   }
 `;
 
@@ -56,10 +58,4 @@ export const Image = styled.img`
   width: 85%;
 `;
 
-export const Container = styled.div`
-  @media (max-width: 1000px) {
-    ${Item}:last-of-type h2 {
-      margin-bottom: 50px;
-    }
-  }
-`;
+export const Container = styled.div``;

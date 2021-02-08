@@ -2,7 +2,7 @@ import styled from 'styled-components/macro';
 
 export const Container = styled.footer`
   display: flex;
-  padding: 7rem 0;
+  padding: 7rem 1.5rem;
   margin: auto;
   max-width: 1000px;
   flex-direction: column;

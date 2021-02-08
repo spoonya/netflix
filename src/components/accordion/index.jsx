@@ -1,9 +1,16 @@
 import React, { createContext, useState, useContext } from 'react';
-import { Container, Item, Body, Header, Inner, Title } from './styles/faq';
+import {
+  Container,
+  Item,
+  Body,
+  Header,
+  Inner,
+  Title
+} from './styles/accordion';
 
 const ToggleCtx = createContext();
 
-export default function Faq(props) {
+export default function Accordion(props) {
   const { children } = props;
 
   return (
@@ -13,13 +20,13 @@ export default function Faq(props) {
   );
 }
 
-Faq.Title = function FaqTitle(props) {
+Accordion.Title = function FaqTitle(props) {
   const { children } = props;
 
   return <Title>{children}</Title>;
 };
 
-Faq.Item = function FaqItem(props) {
+Accordion.Item = function FaqItem(props) {
   const [toggle, setToggle] = useState(false);
   const { children } = props;
 
@@ -30,7 +37,7 @@ Faq.Item = function FaqItem(props) {
   );
 };
 
-Faq.Header = function FaqHeader(props) {
+Accordion.Header = function FaqHeader(props) {
   const { children } = props;
   const { toggle, setToggle } = useContext(ToggleCtx);
 
@@ -46,7 +53,7 @@ Faq.Header = function FaqHeader(props) {
   );
 };
 
-Faq.Body = function FaqBody(props) {
+Accordion.Body = function FaqBody(props) {
   const { children } = props;
   const { toggle } = useContext(ToggleCtx);
 
