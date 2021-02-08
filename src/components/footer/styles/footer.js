@@ -35,14 +35,14 @@ export const Title = styled.h2`
 `;
 
 export const Text = styled.p`
-  font-size: 14px;
+  font-size: 13px;
   color: #757575;
 `;
 
 export const Link = styled.a`
   color: #757575;
   margin-bottom: 20px;
-  font-size: 14px;
+  font-size: 13px;
 
   &:hover {
     text-decoration: underline;

@@ -3,7 +3,7 @@ import styled from 'styled-components/macro';
 export const Item = styled.div`
   display: flex;
   border-bottom: 8px solid #222;
-  padding: 3rem 5%;
+  padding: 4rem 5%;
   color: #fff;
   overflow: hidden;
 `;
@@ -33,7 +33,7 @@ export const Title = styled.h2`
   font-size: 5rem;
   line-height: 1.1;
   font-weight: 600;
-  margin-bottom: 0.8rem;
+  margin-bottom: 1.5rem;
 
   @media (max-width: 600px) {
     font-size: 3.5rem;
@@ -44,7 +44,7 @@ export const SubTitle = styled.h3`
   font-size: 2.6rem;
   font-weight: normal;
   line-height: normal;
-  width: 92%;
+  width: 89%;
 
   @media (max-width: 600px) {
     font-size: 1.8rem;
@@ -52,7 +52,9 @@ export const SubTitle = styled.h3`
   }
 `;
 
-export const Image = styled.img``;
+export const Image = styled.img`
+  width: 85%;
+`;
 
 export const Container = styled.div`
   @media (max-width: 1000px) {

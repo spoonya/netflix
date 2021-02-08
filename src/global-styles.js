@@ -14,14 +14,33 @@ const GlobalStyles = createGlobalStyle`
   }
 
   body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    background-color: #000;
+    color: #333;
     font-size: 1.6rem;
     height: 100%;
   }
 
-  body {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    background-color: #000;
-    color: #333;
+  input {
+    font: inherit;
+    border: none;
+    outline: none;
+    background: none;
+  }
+
+  input[type='button'] {
+    padding: 0;
+    cursor: pointer;
+  }
+
+  button {
+    font: inherit;
+    padding: 0;
+    cursor: pointer;
+    color: inherit;
+    border: none;
+    outline: none;
+    background: none;
   }
 
   img {
@@ -41,7 +60,6 @@ const GlobalStyles = createGlobalStyle`
   h5,
   h6 {
     font-weight: 400;
-
     margin: 0;
     padding: 0;
   }
