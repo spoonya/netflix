@@ -1,7 +1,7 @@
 import React from 'react';
 import { Feature } from '../components';
 import FaqContainer from '../containers/faq';
-import { FooterContainer } from '../containers/footer';
+import FooterContainer from '../containers/footer';
 import HeaderContainer from '../containers/header';
 import { JumbotronContainer } from '../containers/jumbotron';
 import OptFormContainer from '../containers/opt-form';
