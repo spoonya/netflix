@@ -10,7 +10,6 @@ export const Inner = styled.div`
   padding: 4rem 4.5rem;
   flex-direction: column;
   margin: auto;
-  width: 67%;
 
   @media (max-width: 1000px) {
     width: 100%;
@@ -38,8 +37,9 @@ export const Title = styled.h2`
 
 export const Item = styled.div`
   color: #fff;
-  margin-bottom: 10px;
   width: 100%;
+  max-width: 670px;
+  margin: 0 auto 10px;
 
   &:first-of-type {
     margin-top: 3em;
