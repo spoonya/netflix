@@ -1,5 +1,5 @@
 import React from 'react';
-import { OptForm, Feature } from '../components';
+import { Feature } from '../components';
 import FaqContainer from '../containers/faq';
 import { FooterContainer } from '../containers/footer';
 import HeaderContainer from '../containers/header';

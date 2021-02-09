@@ -16,6 +16,7 @@ module.exports = {
   rules: {
     'react/prop-types': 'off',
     'import/prefer-default-export': 'off',
-    'no-unused-vars': 'warn'
+    'no-unused-vars': 'warn',
+    'no-bitwise': 'off'
   }
 };

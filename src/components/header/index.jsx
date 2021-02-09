@@ -21,11 +21,11 @@ Header.Frame = function HeaderFrame(props) {
 };
 
 Header.Logo = function HeaderLogo(props) {
-  const { to, src } = props;
+  const { to, src, alt } = props;
 
   return (
     <ReactRouterLink to={to}>
-      <Logo src={src} />
+      <Logo src={src} alt={alt} />
     </ReactRouterLink>
   );
 };
