@@ -54,17 +54,30 @@ Form.Link = function FormLink(props) {
 };
 
 Form.Input = function FormInput(props) {
-  const { children, placeholder, type, autoComplete } = props;
+  const {
+    children,
+    placeholder,
+    type,
+    autoComplete,
+    required,
+    onChange
+  } = props;
 
   return (
-    <Input placeholder={placeholder} type={type} autoComplete={autoComplete}>
+    <Input
+      placeholder={placeholder}
+      type={type}
+      autoComplete={autoComplete}
+      required={required}
+      onChange={onChange}
+    >
       {children}
     </Input>
   );
 };
 
 Form.Submit = function FormSubmit(props) {
-  const { children, disabled } = props;
+  const { children, type } = props;
 
-  return <Submit disabled={disabled}>{children}</Submit>;
+  return <Submit type={type}>{children}</Submit>;
 };

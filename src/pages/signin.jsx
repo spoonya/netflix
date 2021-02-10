@@ -1,18 +1,28 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
+import { useHistory } from 'react-router-dom';
+import { FirebaseCtx } from '../context/firebase';
 import { Form } from '../components';
 import FooterContainer from '../containers/footer';
 import HeaderContainer from '../containers/header';
 import * as ROUTES from '../constants/routes';
 
 export default function Signin() {
-  const [email, setEmail] = useState();
-  const [password, setPassword] = useState();
-  const [error, setError] = useState('');
+  const { firebase } = useContext(FirebaseCtx);
+  const history = useHistory();
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [errorMsg, setErrorMsg] = useState('');
 
-  const isInvalid = password === '' || email === '';
+  const handleSignin = (event) => {
+    event.preventDefault();
 
-  const hanldeSingin = (e) => {
-    e.preventDefault();
+    return firebase
+      .auth()
+      .signInWithEmailAndPassword(email.trim(), password.trim())
+      .then(() => history.push(ROUTES.BROWSE))
+      .catch((error) => {
+        setErrorMsg(error.message);
+      });
   };
 
   return (
@@ -21,22 +31,25 @@ export default function Signin() {
         <Form>
           <Form.Title>Sign In</Form.Title>
 
-          {error && <Form.Error>{error}</Form.Error>}
+          {errorMsg && <Form.Error>{errorMsg}</Form.Error>}
 
-          <Form.Base method="POST" onSubmit={hanldeSingin}>
+          <Form.Base onSubmit={handleSignin} method="POST">
             <Form.Input
+              type="email"
               placeholder="Email address"
               value={email}
+              required
               onChange={({ target }) => setEmail(target.value)}
             />
             <Form.Input
               type="password"
               placeholder="Password"
-              autoComplete="Off"
               value={password}
+              autoComplete="off"
+              required
               onChange={({ target }) => setPassword(target.value)}
             />
-            <Form.Submit disabled={isInvalid}>Sign In</Form.Submit>
+            <Form.Submit type="submit">Sign In</Form.Submit>
           </Form.Base>
 
           <Form.Text>

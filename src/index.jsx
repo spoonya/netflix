@@ -4,16 +4,14 @@ import App from './app';
 import 'normalize.css';
 import GlobalStyles from './global-styles';
 import { firebase } from './lib/firebase.prod';
-import { FirebaseContext } from './context/firebase';
+import { FirebaseCtx } from './context/firebase';
 
 render(
-  <>
-    <FirebaseContext.Provider value={{ firebase }}>
+  <React.StrictMode>
+    <FirebaseCtx.Provider value={{ firebase }}>
       <GlobalStyles />
-      <React.StrictMode>
-        <App />
-      </React.StrictMode>
-    </FirebaseContext.Provider>
-  </>,
+      <App />
+    </FirebaseCtx.Provider>
+  </React.StrictMode>,
   document.getElementById('root')
 );
