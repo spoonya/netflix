@@ -36,7 +36,11 @@ export const SubTitle = styled.h2`
 `;
 
 export const Disclaimer = styled.p`
-  font-size: 1.9rem;
+  font-size: 1.8rem;
   text-align: center;
   color: #fff;
+
+  @media (max-width: 600px) {
+    font-size: 1.6rem;
+  }
 `;

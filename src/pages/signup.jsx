@@ -6,7 +6,7 @@ import FooterContainer from '../containers/footer';
 import HeaderContainer from '../containers/header';
 import * as ROUTES from '../constants/routes';
 
-export default function Signup() {
+export default function SignUp() {
   const { firebase } = useContext(FirebaseCtx);
   const history = useHistory();
   const [name, setName] = useState('');
@@ -14,7 +14,7 @@ export default function Signup() {
   const [password, setPassword] = useState('');
   const [errorMsg, setErrorMsg] = useState('');
 
-  const handleSignup = (event) => {
+  const handleSignUp = (event) => {
     event.preventDefault();
 
     return firebase
@@ -24,11 +24,11 @@ export default function Signup() {
         result.user
           .updateProfile({
             displayName: name.trim(),
-            photoURL: Math.floor(Math.random() * 5) + 1
+            photoURL: Math.floor(Math.random() * 5) + 1,
           })
           .then(() => {
             history.push(ROUTES.BROWSE);
-          })
+          }),
       )
       .catch((error) => {
         setErrorMsg(error.message);
@@ -42,7 +42,7 @@ export default function Signup() {
           <Form.Title>Sign Up</Form.Title>
           {errorMsg && <Form.Error>{errorMsg}</Form.Error>}
 
-          <Form.Base onSubmit={handleSignup} method="POST">
+          <Form.Base onSubmit={handleSignUp} method="POST">
             <Form.Input
               type="text"
               placeholder="First name"

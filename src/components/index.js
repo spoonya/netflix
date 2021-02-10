@@ -1,7 +1,7 @@
-export { default as Jumbotron } from './jumbotron';
-export { default as Footer } from './footer';
-export { default as Accordion } from './accordion';
-export { default as OptForm } from './opt-form';
-export { default as Header } from './header';
-export { default as Feature } from './feature';
-export { default as Form } from './form';
+export { default as Jumbotron } from './jumbotron/Jumbotron';
+export { default as Footer } from './footer/Footer';
+export { default as Accordion } from './accordion/Accordion';
+export { default as OptForm } from './opt-form/OptForm';
+export { default as Header } from './header/Header';
+export { default as Feature } from './feature/Feature';
+export { default as Form } from './form/Form';

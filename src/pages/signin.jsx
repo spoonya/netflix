@@ -6,14 +6,14 @@ import FooterContainer from '../containers/footer';
 import HeaderContainer from '../containers/header';
 import * as ROUTES from '../constants/routes';
 
-export default function Signin() {
+export default function SignIn() {
   const { firebase } = useContext(FirebaseCtx);
   const history = useHistory();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [errorMsg, setErrorMsg] = useState('');
 
-  const handleSignin = (event) => {
+  const handleSignIn = (event) => {
     event.preventDefault();
 
     return firebase
@@ -33,7 +33,7 @@ export default function Signin() {
 
           {errorMsg && <Form.Error>{errorMsg}</Form.Error>}
 
-          <Form.Base onSubmit={handleSignin} method="POST">
+          <Form.Base onSubmit={handleSignIn} method="POST">
             <Form.Input
               type="email"
               placeholder="Email address"
