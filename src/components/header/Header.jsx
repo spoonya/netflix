@@ -5,13 +5,13 @@ import {
   Background,
   Frame,
   Logo,
-  ButtonLink
+  ButtonLink,
 } from './styles/header';
 
 export default function Header(props) {
-  const { children, bg } = props;
+  const { children, bg = true, src } = props;
 
-  return bg ? children : <Background>{children}</Background>;
+  return bg ? <Background src={src}>{children}</Background> : children;
 }
 
 Header.Frame = function HeaderFrame(props) {
