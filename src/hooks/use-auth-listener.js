@@ -5,7 +5,6 @@ export default function useAuthListener() {
   const userItem = 'netflix-authUser';
 
   const [user, setUser] = useState(JSON.parse(localStorage.getItem(userItem)));
-
   const { firebase } = useContext(FirebaseCtx);
 
   useEffect(() => {
@@ -15,10 +14,11 @@ export default function useAuthListener() {
         setUser(authUser);
       } else {
         localStorage.removeItem(userItem);
+        setUser(null);
       }
     });
 
-    return () => listener;
+    return () => listener();
   }, []);
 
   return { user };

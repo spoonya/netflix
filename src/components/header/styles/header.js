@@ -1,5 +1,5 @@
 import styled from 'styled-components/macro';
-import { Link as ReachRouterLink } from 'react-router-dom';
+import { Link as ReactRouterLink } from 'react-router-dom';
 
 export const Background = styled.div`
   display: flex;
@@ -35,7 +35,7 @@ export const Background = styled.div`
 
 export const Container = styled.div`
   display: flex;
-  margin: 0 4.6rem;
+  margin: 0 4.6rem 0 3rem;
   justify-content: space-between;
   align-items: center;
   z-index: 1;
@@ -62,7 +62,7 @@ export const Logo = styled.img`
   }
 `;
 
-export const ButtonLink = styled(ReachRouterLink)`
+export const ButtonLink = styled(ReactRouterLink)`
   display: inline-block;
   background-color: #e50914;
   color: #fff;
@@ -103,10 +103,9 @@ export const Text = styled.p`
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.45);
 `;
 
-export const ButtonFilter = styled.button`
-  color: #ddd;
-  font-size: 1.8rem;
-
+export const TextLink = styled.p`
+  color: #aaa;
+  font-size: 18px;
   text-decoration: none;
   margin-right: 3rem;
   color: ${({ active }) => (active === 'true' ? '#fff' : '#aaa')};
@@ -148,7 +147,7 @@ export const Dropdown = styled.div`
   top: 3.2rem;
   right: 1rem;
 
-  ${Group}:last-of-type ${ButtonFilter} {
+  ${Group}:last-of-type ${TextLink} {
     cursor: pointer;
   }
 
@@ -159,7 +158,7 @@ export const Dropdown = styled.div`
       margin-bottom: 0;
     }
 
-    ${ButtonFilter} {
+    ${TextLink} {
       cursor: pointer;
     }
 

@@ -8,7 +8,7 @@ import {
   ButtonLink,
   Text,
   FeatureCallOut,
-  ButtonFilter,
+  TextLink,
   Group,
   Dropdown,
   Picture,
@@ -20,7 +20,7 @@ import {
 } from './styles/header';
 
 export default function Header(props) {
-  const { children, bg = true, src, dontShowOnSmallViewPort } = props;
+  const { children, bg = true, src } = props;
 
   return bg ? (
     <Background src={src} dontShowOnSmallViewPort>
@@ -72,12 +72,12 @@ Header.Text = function HeaderText(props) {
 };
 
 Header.TextLink = function HeaderTextLink(props) {
-  const { children, href, onClick, active } = props;
+  const { children, onClick, active } = props;
 
   return (
-    <ButtonFilter onClick={onClick} active={active}>
+    <TextLink onClick={onClick} active={active}>
       {children}
-    </ButtonFilter>
+    </TextLink>
   );
 };
 

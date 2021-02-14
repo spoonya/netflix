@@ -18,7 +18,6 @@ export default function App() {
         >
           <SignIn />
         </IsUserRedirect>
-
         <IsUserRedirect
           user={user}
           loggedInPath={ROUTES.BROWSE}
@@ -26,11 +25,9 @@ export default function App() {
         >
           <SignUp />
         </IsUserRedirect>
-
         <ProtectedRoute user={user} path={ROUTES.BROWSE}>
           <Browse />
         </ProtectedRoute>
-
         <IsUserRedirect
           user={user}
           loggedInPath={ROUTES.BROWSE}
