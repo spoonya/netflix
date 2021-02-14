@@ -20,9 +20,15 @@ import {
 } from './styles/header';
 
 export default function Header(props) {
-  const { children, bg = true, src } = props;
+  const { children, bg = true, src, dontShowOnSmallViewPort } = props;
 
-  return bg ? <Background src={src}>{children}</Background> : children;
+  return bg ? (
+    <Background src={src} dontShowOnSmallViewPort>
+      {children}
+    </Background>
+  ) : (
+    children
+  );
 }
 
 Header.Feature = function HeaderFeature(props) {
@@ -66,10 +72,10 @@ Header.Text = function HeaderText(props) {
 };
 
 Header.TextLink = function HeaderTextLink(props) {
-  const { children, href, onClick } = props;
+  const { children, href, onClick, active } = props;
 
   return (
-    <Link href={href} onClick={onClick}>
+    <Link href={href} onClick={onClick} active={active}>
       {children}
     </Link>
   );

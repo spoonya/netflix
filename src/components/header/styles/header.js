@@ -56,6 +56,10 @@ export const Logo = styled.img`
   @media (max-width: 1000px) {
     max-width: 12rem;
   }
+
+  @media (max-width: 600px) {
+    margin-right: 1rem;
+  }
 `;
 
 export const ButtonLink = styled(ReachRouterLink)`
@@ -73,7 +77,7 @@ export const ButtonLink = styled(ReachRouterLink)`
 `;
 
 export const Feature = styled(Container)`
-  padding: 15rem 0 50rem 0;
+  padding: 15rem 0 25rem 0;
   flex-direction: column;
   align-items: normal;
   width: 50%;
@@ -101,11 +105,11 @@ export const Text = styled.p`
 
 export const Link = styled.p`
   color: #ddd;
-  font-size: 18px;
+  font-size: 1.8rem;
 
   text-decoration: none;
   margin-right: 3rem;
-  color: ${({ active }) => (active === 'true' ? '#fff' : '#ddd')};
+  color: ${({ active }) => (active === 'true' ? '#fff' : '#aaa')};
   cursor: pointer;
   transition: color 0.1s linear;
 
@@ -115,6 +119,11 @@ export const Link = styled.p`
 
   &:last-of-type {
     margin-right: 0;
+  }
+
+  @media (max-width: 600px) {
+    font-size: 1.6rem;
+    margin-right: 2rem;
   }
 `;
 

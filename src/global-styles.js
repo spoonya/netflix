@@ -28,6 +28,10 @@ const GlobalStyles = createGlobalStyle`
     background: none;
   }
 
+  video {
+    outline: none;
+  }
+
   input[type='button'] {
     padding: 0;
     cursor: pointer;
