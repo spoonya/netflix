@@ -21,13 +21,16 @@ Player.Video = function PlayerVideo(props) {
 
   return showPlayer
     ? ReactDOM.createPortal(
-        <Overlay>
+        <Overlay data-testid="player">
           <Inner>
             <video id="netflix-player" controls>
               <track kind="captions" />
               <source src={src} type="video/mp4" />
             </video>
-            <Close onClick={() => setShowPlayer(false)} />
+            <Close
+              onClick={() => setShowPlayer(false)}
+              data-testid="player-close"
+            />
           </Inner>
         </Overlay>,
         document.body,
@@ -36,7 +39,7 @@ Player.Video = function PlayerVideo(props) {
 };
 
 Player.Button = function PlayerButton() {
-  const { showPlayer, setShowPlayer } = useContext(PlayerCtx);
+  const { setShowPlayer } = useContext(PlayerCtx);
 
   return <Button onClick={() => setShowPlayer((prev) => !prev)}>Play</Button>;
 };

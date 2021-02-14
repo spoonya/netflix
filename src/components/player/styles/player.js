@@ -12,7 +12,6 @@ export const Overlay = styled.div`
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.75);
-  margin: 0 2rem;
   z-index: 2;
 `;
 
@@ -75,10 +74,9 @@ export const Button = styled.button`
   align-items: center;
   justify-content: center;
   padding-left: 0;
-  transition: transform 0.1s linear;
+  transition: background-color 0.1s linear;
 
   &:hover {
-    transform: scale(1.05);
     background-color: #ff0a16;
   }
 `;

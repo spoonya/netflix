@@ -3,7 +3,6 @@ import { FirebaseCtx } from '../context/firebase';
 
 export default function useAuthListener() {
   const userItem = 'netflix-authUser';
-
   const [user, setUser] = useState(JSON.parse(localStorage.getItem(userItem)));
   const { firebase } = useContext(FirebaseCtx);
 
