@@ -103,7 +103,7 @@ export const Text = styled.p`
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.45);
 `;
 
-export const Link = styled.p`
+export const ButtonFilter = styled.button`
   color: #ddd;
   font-size: 1.8rem;
 
@@ -148,7 +148,7 @@ export const Dropdown = styled.div`
   top: 3.2rem;
   right: 1rem;
 
-  ${Group}:last-of-type ${Link} {
+  ${Group}:last-of-type ${ButtonFilter} {
     cursor: pointer;
   }
 
@@ -159,7 +159,7 @@ export const Dropdown = styled.div`
       margin-bottom: 0;
     }
 
-    ${Link} {
+    ${ButtonFilter} {
       cursor: pointer;
     }
 

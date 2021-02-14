@@ -8,7 +8,7 @@ import {
   ButtonLink,
   Text,
   FeatureCallOut,
-  Link,
+  ButtonFilter,
   Group,
   Dropdown,
   Picture,
@@ -75,9 +75,9 @@ Header.TextLink = function HeaderTextLink(props) {
   const { children, href, onClick, active } = props;
 
   return (
-    <Link href={href} onClick={onClick} active={active}>
+    <ButtonFilter onClick={onClick} active={active}>
       {children}
-    </Link>
+    </ButtonFilter>
   );
 };
 
