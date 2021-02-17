@@ -5,7 +5,7 @@ import {
   Body,
   Header,
   Inner,
-  Title
+  Title,
 } from './styles/accordion';
 
 const ToggleCtx = createContext();
@@ -42,7 +42,7 @@ Accordion.Header = function FaqHeader(props) {
   const { toggle, setToggle } = useContext(ToggleCtx);
 
   return (
-    <Header onClick={() => setToggle((prev = toggle) => !prev)}>
+    <Header onClick={() => setToggle((prev) => !prev)}>
       {children}
       {toggle ? (
         <img src="/images/icons/close.png" alt="Close" />
